@@ -1,0 +1,40 @@
+NOTICE
+======
+
+Ephone-S（小手机 Android 版）
+A non-commercial derivative work based on Ephone / 小手机.
+
+本作品为二次改编作品（Derivative Work），依据 Ephone 原作者 EE 及尾巴镇社区的授权规则发布。
+This is a derivative work, released under the authorization rules of the original
+Ephone creator EE and the TailTown community.
+
+-------------------------------------------------------------------------------
+原作者与来源 / Original Authors & Sources
+-------------------------------------------------------------------------------
+
+本项目基于以下创作者的工作：
+- EE、JCY、330、kuku —— Ephone / 小手机 原作者与贡献者
+- Susking（白枢）—— Android 原生版二次改编
+
+来源：尾巴镇社区 Ephone 项目
+
+-------------------------------------------------------------------------------
+改动说明 / Summary of Modifications
+-------------------------------------------------------------------------------
+
+本项目在原 HTML 版本基础上，重写并扩展为 Android 原生应用（Kotlin / XML）
+
+-------------------------------------------------------------------------------
+授权条件 / License Conditions
+-------------------------------------------------------------------------------
+
+- 仅限非商业用途 / Non-commercial use only.
+- 禁止付费传播、倒卖、引流或任何变相商业化
+  / No paid distribution, reselling, traffic diversion or monetization.
+- 二次改编须署名、标注来源、事先告知原作者并公开修改后的代码
+  / Any further modification must credit authors, cite sources,
+    notify the original author in advance, and publicly release the source.
+- 禁止未经授权的二次传播 / No unauthorized redistribution.
+
+使用、修改或传播本作品即视为已阅读并同意上述条件。
+Any use, modification, or redistribution constitutes acceptance of these terms.
