@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tavern_app_name">酒馆</string>
+
+    <!-- 服务未连接时的引导页文案 -->
+    <string name="tavern_error_title">未检测到酒馆服务</string>
+    <string name="tavern_error_message">请先在 Termux 中启动 SillyTavern 服务（默认地址 127.0.0.1:8000），再点击下方重试。</string>
+    <string name="tavern_error_message_no_termux">未检测到 Termux，无法连接酒馆服务。请安装 Termux 并在其中启动 SillyTavern（默认地址 127.0.0.1:8000）后重试。</string>
+    <string name="tavern_error_retry">重试</string>
+    <string name="tavern_open_termux">打开 Termux</string>
+    <string name="tavern_termux_launch_failed">无法打开 Termux，请手动启动。</string>
+
+    <!-- 「锦囊」悬浮窗与提示词储存器 -->
+    <string name="jinnang_fab_description">锦囊工具</string>
+    <string name="jinnang_title">锦囊</string>
+    <string name="jinnang_entry_prompt_storage">提示词储存器</string>
+    <string name="jinnang_entry_prompt_storage_desc">收藏、随机句子与词语</string>
+    <string name="jinnang_entry_save_chat">保存当前对话</string>
+    <string name="jinnang_entry_save_chat_desc">存入桌面「酒馆记录」</string>
+    <string name="jinnang_entry_pull_regex">拉取酒馆正则</string>
+    <string name="jinnang_entry_pull_regex_desc">把酒馆全局正则同步到「酒馆记录」</string>
+    <string name="jinnang_close">关闭</string>
+    <string name="jinnang_back">返回</string>
+
+    <!-- 拉取正则结果提示 -->
+    <string name="pull_regex_success">已拉取 %1$d 条正则到酒馆记录</string>
+    <string name="pull_regex_empty">酒馆没有可拉取的全局正则</string>
+    <string name="pull_regex_failed">无法读取酒馆正则，请确认酒馆已加载</string>
+
+    <!-- 提示词储存器 -->
+    <string name="prompt_storage_title">提示词储存器</string>
+    <string name="prompt_sentence_section">句子</string>
+    <string name="prompt_word_section">词语</string>
+    <string name="prompt_add">添加</string>
+    <string name="prompt_random">随机</string>
+    <string name="prompt_re_random">重新随机</string>
+    <string name="prompt_copy">复制</string>
+    <string name="prompt_add_sentence_hint">输入一句提示词</string>
+    <string name="prompt_add_word_hint">输入一个词语</string>
+    <string name="prompt_add_dialog_title_sentence">添加句子</string>
+    <string name="prompt_add_dialog_title_word">添加词语</string>
+    <string name="prompt_delete">删除</string>
+    <string name="prompt_delete_confirm">确定删除该条提示词？</string>
+    <string name="prompt_empty_sentence">还没有句子，点「添加」新增一条</string>
+    <string name="prompt_empty_word">还没有词语，点「添加」新增一个</string>
+    <string name="prompt_random_empty">没有可随机的内容，请先添加</string>
+    <string name="prompt_copied">已复制到剪贴板</string>
+    <string name="prompt_word_count_setting">词语随机数量范围</string>
+    <string name="prompt_word_count_min">最少</string>
+    <string name="prompt_word_count_max">最多</string>
+    <string name="prompt_word_count_save">保存范围</string>
+    <string name="prompt_word_count_saved">数量范围已保存</string>
+    <string name="prompt_word_count_invalid">范围无效：最少需≥1 且不大于最多</string>
+
+    <!-- 保存对话到酒馆记录 -->
+    <string name="save_chat_dialog_title">保存到酒馆记录</string>
+    <string name="save_chat_name_hint">记录名称</string>
+    <string name="save_chat_confirm">保存</string>
+    <string name="save_chat_cancel">取消</string>
+    <string name="save_chat_empty">当前没有可保存的对话</string>
+    <string name="save_chat_extract_failed">无法读取当前对话，请确认酒馆已加载</string>
+    <string name="save_chat_success">已保存到酒馆记录</string>
+    <string name="save_chat_failed">保存失败</string>
+
+    <!-- WebView 无障碍描述 -->
+    <string name="tavern_webview_description">酒馆对话界面</string>
+
+    <!-- 退出/挂后台选择对话框 -->
+    <string name="tavern_exit_title">离开酒馆</string>
+    <string name="tavern_exit_message">挂在后台可保留当前页面，下次进入无需重新加载；真正退出会关闭酒馆页面。</string>
+    <string name="tavern_exit_background">挂后台</string>
+    <string name="tavern_exit_quit">退出酒馆</string>
+    <string name="tavern_exit_cancel">取消</string>
+</resources>

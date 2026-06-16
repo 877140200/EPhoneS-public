@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/examEditorToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:title="考试编辑"
+        app:navigationIcon="@android:drawable/ic_menu_revert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/examEditorToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="独立考试编辑页"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/examNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="考试名，例如 高数期中"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/examClassroomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="考场，可留空"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/examScopeInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="考试范围，可留空"
+                android:inputType="textMultiLine"
+                android:maxLines="4" />
+
+            <EditText
+                android:id="@+id/examImportanceInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="重要程度，1-5"
+                android:inputType="number" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/saveExamButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="保存考试" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,122 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EPhoneS" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.EPhoneS" parent="Base.Theme.EPhoneS" />
+
+    <!-- 自定义对话框样式，用于“邮票形状”背景且不占满全屏 -->
+    <style name="Theme.EPhoneS.StampDialog" parent="Theme.Material3.DayNight.Dialog">
+        <!-- 移除对话框标题，通常对话框内部的 Toolbar 会提供标题和关闭按钮 -->
+        <item name="windowNoTitle">true</item>
+        <!-- 应用新的邮票形状背景Drawable -->
+        <item name="android:windowBackground">@drawable/bg_stamp_dialog</item>
+        <!-- 将对话框浮动在Activity之上，而不是全屏 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 确保对话框不占用全屏 -->
+        <item name="android:windowFullscreen">false</item>
+        <!-- 确保对话框背景变暗，以突出对话框内容 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 可以调整背景变暗的程度，0.0到1.0 -->
+        <item name="android:backgroundDimAmount">0.6</item>
+        <!-- 可以设置对话框的最小宽度，使其在不同屏幕尺寸下有更好的显示效果 -->
+         <item name="android:windowMinWidthMajor">80%</item>
+         <item name="android:windowMinWidthMinor">80%</item>
+    </style>
+
+    <style name="Theme.EPhoneS.CustomDialog" parent="Theme.Material3.DayNight.Dialog">
+        <!-- 移除对话框标题，通常对话框内部的 Toolbar 会提供标题和关闭按钮 -->
+        <item name="windowNoTitle">true</item>
+        <!-- 应用自定义的圆角背景Drawable -->
+        <item name="android:windowBackground">@drawable/dialog_rounded_corners</item>
+        <!-- 将对话框浮动在Activity之上，而不是全屏 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 确保对话框不占用全屏 -->
+        <item name="android:windowFullscreen">false</item>
+        <!-- 确保对话框背景不透明，因为我们提供了 windowBackground -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+
+    <style name="ShapeAppearance.App.RoundCornerImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+    <style name="DockAppContainer">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="DockAppIcon" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.RoundCornerImageView</item>
+    </style>
+
+    <style name="DockAppName" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="ChatIcon" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="tint">?attr/colorOnSurfaceVariant</item>
+    </style>
+
+    <style name="ShapeAppearance.App.CircleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="TextAppearance.App.Toolbar.Title" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textSize">36sp</item>
+    </style>
+
+    <style name="TextAppearance.App.Toolbar.Title.Small" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Widget.App.Button.TextButton.Icon" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textAppearance">?attr/textAppearanceCaption</item>
+    </style>
+
+    <style name="WaimaiDetailTextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <!-- 用于 ImageViewerFragment 的全屏透明主题 -->
+    <style name="TransparentDialog" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

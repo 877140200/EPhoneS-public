@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvConflictTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="数据冲突"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvConflictId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ID信息"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tvContactInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="联系人信息"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tvTimestamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="时间戳"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="现有数据:"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <ScrollView
+        android:id="@+id/scrollViewExistingData"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/tvExistingData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="现有数据内容"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:background="@android:color/darker_gray" />
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="导入数据:"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <ScrollView
+        android:id="@+id/scrollViewImportData"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/tvImportData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="导入数据内容"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:background="@android:color/darker_gray" />
+    </ScrollView>
+
+</LinearLayout>

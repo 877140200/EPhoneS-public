@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="photo_viewer_background">#FF000000</color> <!-- 夜间模式背景为黑色 -->
+    <color name="photo_viewer_back_icon_tint">#FFBB86FC</color> <!-- 夜间模式图标为紫色 -->
+    <color name="material_on_surface_emphasis_medium">@color/white</color> <!-- Night mode: White -->
+</resources>

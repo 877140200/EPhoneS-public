@@ -1,0 +1,34 @@
+<resources>
+    &lt;string name="pin"&gt;置顶&lt;/string&gt;
+    <string name="app_name">EPhone-S</string>
+    <string name="app_icon_description">Application Icon</string>
+    <string name="world_book_feature_name">世界书集</string>
+    <string name="action_create_world_book">创建世界书</string>
+    <string name="action_export_world_books">导出世界书</string>
+    <string name="action_import_world_book">导入世界书</string>
+    <string name="action_edit_world_book">编辑</string>
+    <string name="action_delete_world_book">删除</string>
+    <string name="dialog_create_world_book_title">创建新世界书</string>
+    <string name="dialog_edit_world_book_title">编辑世界书</string>
+    <string name="hint_world_book_title">标题</string>
+    <string name="hint_world_book_content">内容</string>
+    <string name="button_cancel">取消</string>
+    <string name="button_save">保存</string>
+    <string name="button_delete">删除</string>
+    <string name="empty_world_book_list_message">还没有世界书，点击右上角 \'+\' 创建一个吧！</string>
+    <string name="world_book_list_description">世界书列表</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_world_book_category">分类</string>
+    <string name="at_friend">\@好友</string>
+    <string name="add_tag">添加标签</string>
+    <string name="add_location">添加地点</string>
+    <string name="ai_text">AI配文</string>
+    <string name="sticker_content_description">Sticker</string>
+    <string name="nav_messages">消息</string>
+    <string name="nav_contacts">联系人</string>
+    <string name="nav_updates">动态</string>
+    <string name="nav_favorites">收藏</string>
+    <string name="call_ended_by_contact">对方已结束通话</string>
+    <string name="create_appointment">新建约定</string>
+    <string name="toolbar_title_memories">回忆</string>
+</resources>

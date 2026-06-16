@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <!-- 时间分割线 -->
+    <TextView
+        android:id="@+id/time_divider_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="12dp"
+        android:background="@android:color/transparent"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="2dp"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:text="昨天 14:30"
+        tools:visibility="visible" />
+
+    <!-- 使用RelativeLayout来扁平化布局 -->
+    <RelativeLayout
+        android:id="@+id/message_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <CheckBox
+            android:id="@+id/multi_select_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/avatar_image_view"
+            android:layout_alignBottom="@id/avatar_image_view"
+            android:layout_marginStart="4dp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/avatar_image_view"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toEndOf="@id/multi_select_checkbox"
+            android:src="@drawable/ic_default_avatar"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+
+        <!-- 包含所有消息气泡和元数据的容器 -->
+        <LinearLayout
+            android:id="@+id/message_bubble_and_meta_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_toEndOf="@id/avatar_image_view"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical">
+
+            <!-- 引用消息容器 -->
+            <LinearLayout
+                android:id="@+id/bubble_content_wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chat_bubble_received"
+                android:longClickable="true"
+                android:orientation="vertical">
+
+                <!-- 引用消息容器 -->
+                <FrameLayout
+                    android:id="@+id/quote_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <!-- 消息气泡容器，将动态填充内容 -->
+                <FrameLayout
+                    android:id="@+id/content_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!-- 具体的消息内容 (text, image, sticker, etc.) 将被动态添加到这里 -->
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- AI 回复版本切换器 -->
+            <LinearLayout
+                android:id="@+id/ai_response_switcher_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/prev_response_button"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_arrow_left_24" />
+
+                <TextView
+                    android:id="@+id/response_version_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="8dp"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:textSize="12sp"
+                    tools:text="1 / 2" />
+
+                <ImageButton
+                    android:id="@+id/next_response_button"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_arrow_right_24" />
+            </LinearLayout>
+
+            <!-- 时间戳 -->
+            <TextView
+                android:id="@+id/timestamp_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="4dp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="12sp"
+                tools:text="14:30" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

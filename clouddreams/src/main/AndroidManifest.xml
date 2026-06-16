@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+    <application>
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false"
+            android:label="酒馆记录" />
+        <activity
+            android:name=".ui.ChatActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ui.RegexDropdownActivity"
+            android:exported="false"
+            android:theme="@style/DialogTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.RegexEditorActivity"
+            android:exported="false"
+            android:theme="@style/DialogTheme"
+            android:windowSoftInputMode="adjustResize" />
+    </application>
+    
+</manifest>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 天气卡片渐变底：晴空蓝到青色，呼应天气主题。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="135"
+        android:startColor="#2E6BC4"
+        android:endColor="#4ECDD4"
+        android:type="linear" />
+    <corners android:radius="24dp" />
+</shape>

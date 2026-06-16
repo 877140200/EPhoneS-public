@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.susking.ephone_s.qq.ui.chat.GestureInterceptingDrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.QqMainFragment"
+    tools:openDrawer="start">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                style="@style/Widget.Material3.Toolbar.OnSurface"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:menu="@menu/menu_qq_chat_list"
+                app:title="">
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/toolbar_avatar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_default_avatar"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CircleImageView"
+                    android:contentDescription="User Avatar"/>
+
+               <TextView
+                   android:id="@+id/toolbar_title_contacts"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="32dp"
+                   android:text="联系人"
+                   android:textAppearance="?attr/textAppearanceTitleMedium"
+                   android:textColor="?attr/colorOnSurface"
+                   android:textStyle="bold"
+                   android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/toolbar_title_favorites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:text="我的收藏"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/toolbar_title_memories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:text="@string/toolbar_title_memories"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+               <LinearLayout
+                   android:id="@+id/toolbar_user_info_container"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="32dp"
+                   android:gravity="center_vertical"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:id="@+id/toolbar_user_name"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Nickname"
+                       android:textAppearance="?attr/textAppearanceTitleMedium"
+                       android:textColor="?attr/colorOnSurface"
+                       android:textStyle="bold" />
+
+                   <TextView
+                       android:id="@+id/toolbar_user_status"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:drawablePadding="4dp"
+                       android:gravity="center_vertical"
+                       android:text="Online"
+                       android:textAppearance="?attr/textAppearanceBodySmall"
+                       android:textColor="?attr/colorOnSurfaceVariant"
+                       app:drawableStartCompat="@drawable/ic_status_online" />
+
+               </LinearLayout>
+           </com.google.android.material.appbar.MaterialToolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:menu="@menu/menu_qq_bottom_nav" />
+
+        <!-- 【核心修改】添加这个容器作为人设编辑器的宿主 -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_container_for_persona"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- 新增：用于加载聊天页面的容器 -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_container_for_chat"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- 新增：用于加载钱包页面的容器 -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_container_for_wallet"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+       <!-- 新增：用于加载通知页面的容器 -->
+       <androidx.fragment.app.FragmentContainerView
+           android:id="@+id/fragment_container_for_notifications"
+           android:layout_width="0dp"
+           android:layout_height="0dp"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"/>
+
+       <View
+           android:id="@+id/import_overlay"
+           android:layout_width="0dp"
+           android:layout_height="0dp"
+           android:background="#80000000"
+           android:visibility="gone"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           tools:visibility="visible"/>
+
+       <ProgressBar
+           android:id="@+id/import_progress_bar"
+           style="?android:attr/progressBarStyleLarge"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:visibility="gone"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           tools:visibility="visible"/>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+   <com.google.android.material.navigation.NavigationView
+       android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/qq_drawer_header"
+        app:menu="@menu/qq_drawer_menu" />
+
+</com.susking.ephone_s.qq.ui.chat.GestureInterceptingDrawerLayout>

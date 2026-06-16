@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="600dp"
+    android:height="600dp"
+    android:viewportWidth="600"
+    android:viewportHeight="600">
+    
+    <!-- 灰色背景圆圈 -->
+    <path
+        android:strokeColor="#40888888"
+        android:strokeWidth="40"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M300,100 A200,200 0 1,1 300,500 A200,200 0 1,1 300,100"/>
+    
+    <!-- 紫色旋转弧形 -->
+    <path
+        android:strokeColor="@color/primaryColor"
+        android:strokeWidth="40"
+        android:strokeLineCap="round"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M300,100 A200,200 0 0,1 500,300"/>
+</vector>

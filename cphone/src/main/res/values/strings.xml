@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- CPhone相关字符串 -->
+    <string name="empty_contacts">空联系人列表</string>
+    <string name="ai_avatar">AI头像</string>
+    <string name="wallpaper">壁纸</string>
+    <string name="app_icon">应用图标</string>
+    
+    <!-- QQ聊天相关字符串 -->
+    <string name="emoji">表情</string>
+    <string name="type_message">输入消息…</string>
+    <string name="more_options">更多</string>
+    <string name="send">发送</string>
+    <string name="avatar">头像</string>
+    
+    <!-- 通用字符串 -->
+    <string name="favorite">收藏</string>
+    <string name="refresh">刷新</string>
+    <string name="empty_state">暂无数据</string>
+    
+    <!-- 音乐相关字符串 -->
+    <string name="album_cover">专辑封面</string>
+    <string name="play_pause">播放/暂停</string>
+    <string name="next_song">下一首</string>
+</resources>

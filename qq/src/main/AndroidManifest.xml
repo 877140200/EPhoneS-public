@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- QQ 模块 - 无需声明额外权限,权限由主 app 模块声明 -->
+    
+    <application>
+        <!-- 跨应用文本选择处理 -->
+        <activity
+            android:name=".ui.processtext.ProcessTextActivity"
+            android:label="收藏到小手机"
+            android:theme="@style/Theme.ProcessText.Dialog"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.PROCESS_TEXT" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

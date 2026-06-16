@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   Sample backup rules file; uncomment and customize as necessary.
+   See https://developer.android.com/guide/topics/data/autobackup
+   for details.
+   Note: This file is ignored for devices older than API 31
+   See https://developer.android.com/about/versions/12/backup-restore
+-->
+<full-backup-content>
+    <!-- 排除激活状态：license_prefs 不参与系统自动备份。
+         否则朋友在 A 设备激活后，系统备份会把激活状态随云端还原到新设备，
+         绕过 Worker 服务端账本，破坏“一设备一码”。排除后换设备会重新走激活验证。 -->
+    <exclude domain="sharedpref" path="license_prefs.xml"/>
+</full-backup-content>

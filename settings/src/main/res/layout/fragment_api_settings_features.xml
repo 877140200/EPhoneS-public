@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:divider="@drawable/spacer_large"
+            android:showDividers="middle">
+
+    <!-- Background Activity Settings -->
+    <TextView
+        style="@style/TextAppearance.Material3.TitleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="后台活动设置" />
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/background_activity_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启用后台角色活动"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="后台活动检测间隔(秒)">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/background_interval_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/chat_auto_reply_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="启用聊天自动回复"/>
+
+    <TextView
+        style="@style/TextAppearance.Material3.BodySmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="开启后隐藏聊天页手动接收按钮，并在用户离开聊天或短暂停止输入后自动请求 AI 回复。"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="聊天请求超时(秒)">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/chat_request_timeout_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="自动回复间隔(秒)">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/chat_auto_reply_interval_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="追问时间(分)">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/chat_follow_up_delay_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="打字速度(毫秒/字)">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/chat_typing_delay_per_char_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        style="@style/TextAppearance.Material3.BodySmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="参考：30≈打字飞快，60≈正常手速，120≈慢悠悠边想边发。"/>
+
+    <TextView
+        style="@style/TextAppearance.Material3.BodySmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="默认：请求超时180秒，自动回复间隔5秒，追问时间20分，打字速度60毫秒/字。数值越大，AI 逐条发消息的间隔越长，越像真人慢打字。"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="AI被拉黑后冷静期(小时)">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cooldown_period_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Brain Floating Window Settings -->
+    <TextView
+        style="@style/TextAppearance.Material3.TitleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="大脑悬浮窗设置"
+        android:layout_marginTop="24dp"/>
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/enable_brain_floating_window_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启用大脑悬浮窗"/>
+
+    <!-- Voice Message Settings -->
+    <TextView
+        style="@style/TextAppearance.Material3.TitleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="语音消息设置 (Minimax TTS)(暂不支持)"
+        android:layout_marginTop="24dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/hint_background"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:text="在AI 回复的文字前加上 [V] 前缀, 即可让该条消息自动渲染为可播放的语音。"
+        android:textAppearance="@style/TextAppearance.Material3.BodySmall"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Minimax Group ID">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/minimax_group_id_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:passwordToggleEnabled="true"
+        android:hint="Minimax API Key">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/minimax_api_key_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="语音模型 (Model)">
+        <AutoCompleteTextView
+            android:id="@+id/minimax_model_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Image Generation Settings -->
+    <TextView
+        style="@style/TextAppearance.Material3.TitleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="生图功能设置"
+        android:layout_marginTop="24dp"/>
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/enable_novel_ai_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启用 NovelAI 图像生成"/>
+    <TextView
+        style="@style/TextAppearance.Material3.BodySmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:lineSpacingMultiplier="1.2"
+        android:text="开启后可使用NovelAI官方API生成高质量动漫风格图像(必开🔮)\n1.三击下载图片,下面可测试模型或关键词画师串\n2. 429是novel的访问频繁错误, 等待几秒重新即可\n3. 403是多人共号限制, 限制oplus免费出小图但可扣点数\n4. 403也会因为没开🔮报错,实在不行可更换出图尺寸"/>
+    <TextView
+        style="@style/TextAppearance.Material3.BodySmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:lineSpacingMultiplier="1.2"
+        android:text="5. 401是key没权限,检查key是否正确\n6.生成失败:Failed to fetch是跨域限制,下方设置里换代理"/>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="NovelAI 模型">
+        <AutoCompleteTextView
+            android:id="@+id/novel_ai_model_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        style="@style/TextAppearance.Material3.BodySmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="💡必须有oplus订阅的apikey才可以使用!"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleDrawable="@drawable/ic_emoji"
+        android:hint="NovelAI API Key">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/novel_ai_api_key_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        style="@style/TextAppearance.Material3.BodySmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="💡在 NovelAI官网 获取API Key"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <Button
+            android:id="@+id/button_generate_settings"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="生成设置"/>
+        <Button
+            android:id="@+id/button_test_generation"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="测试生成"/>
+    </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

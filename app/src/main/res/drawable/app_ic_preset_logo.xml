@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- 外圈圆圈 -->
+    <path
+        android:fillColor="#00BCD4"
+        android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8z"/>
+    
+    <!-- 线圈笔记本,简约,不超过外圈,颜色和外圈一致 -->
+    <!-- 笔记本矩形 -->
+    <path
+        android:fillColor="#00BCD4"
+        android:pathData="M8.5,7h8v10h-8z"/>
+    
+    <!-- 线圈装饰(左侧三个小圆) -->
+    <path
+        android:fillColor="#00BCD4"
+        android:pathData="M7.5,9m-0.8,0a0.8,0.8 0,1,1 1.6,0a0.8,0.8 0,1,1 -1.6,0"/>
+    <path
+        android:fillColor="#00BCD4"
+        android:pathData="M7.5,12m-0.8,0a0.8,0.8 0,1,1 1.6,0a0.8,0.8 0,1,1 -1.6,0"/>
+    <path
+        android:fillColor="#00BCD4"
+        android:pathData="M7.5,15m-0.8,0a0.8,0.8 0,1,1 1.6,0a0.8,0.8 0,1,1 -1.6,0"/>
+    
+    <!-- 页面横线装饰 -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="0.5"
+        android:pathData="M10.2,10h5"/>
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="0.5"
+        android:pathData="M10.2,12h5"/>
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="0.5"
+        android:pathData="M10.2,14h5"/>
+
+</vector>

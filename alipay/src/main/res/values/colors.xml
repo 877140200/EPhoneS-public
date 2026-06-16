@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 支付宝主题色 -->
+    <color name="alipay_primary">#1677FF</color>
+    <color name="alipay_blue_light">#E6F4FF</color>
+    <color name="alipay_background">#F5F5F5</color>
+    
+    <!-- 收入/支出颜色 -->
+    <color name="income_green">#52C41A</color>
+    <color name="expense_red">#FF4D4F</color>
+</resources>

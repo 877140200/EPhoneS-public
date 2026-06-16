@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_backpack"
+            android:icon="@drawable/ic_inventory_24"
+            android:title="背包" />
+        <item
+            android:id="@+id/drawer_persona"
+            android:icon="@drawable/ic_edit_24"
+            android:title="人设" />
+        <item
+            android:id="@+id/drawer_export"
+            android:icon="@drawable/ic_outbox_24"
+            android:title="导出QQ所有数据" />
+    </group>
+</menu>

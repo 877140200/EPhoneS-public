@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="120dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_quote_message"
+    android:padding="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/quote_root_view">
+
+    <TextView
+        android:id="@+id/quote_sender_and_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="14sp"
+        tools:text="赞美愚者 23:01" />
+
+    <TextView
+        android:id="@+id/quote_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="14sp"
+        tools:text="喵" />
+
+</LinearLayout>

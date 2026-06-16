@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- 外圈圆圈 -->
+    <path
+        android:fillColor="#9C27B0"
+        android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8z"/>
+    <!-- 滚筒刷图标 -->
+    <!-- 滚筒主体（更瘦的淡紫色圆柱形） -->
+    <path
+        android:fillColor="#E1BEE7"
+        android:pathData="M9,7.5h6c0.8,0 1.5,0.7 1.5,1.5v1.5c0,0.8 -0.7,1.5 -1.5,1.5H9c-0.8,0 -1.5,-0.7 -1.5,-1.5V9C7.5,8.2 8.2,7.5 9,7.5z"/>
+    <!-- 滚筒边缘深紫色 -->
+    <path
+        android:fillColor="#BA68C8"
+        android:pathData="M9,7.5h6c0.2,0 0.4,0 0.6,0.1C15.4,7.5 15.2,7.5 15,7.5H9C8.8,7.5 8.6,7.5 8.4,7.6C8.6,7.5 8.8,7.5 9,7.5z"/>
+    <path
+        android:fillColor="#BA68C8"
+        android:pathData="M9,12h6c0.2,0 0.4,0 0.6,-0.1C15.4,11.9 15.2,12 15,12H9C8.8,12 8.6,11.9 8.4,11.9C8.6,12 8.8,12 9,12z"/>
+    <!-- U型金属架连接部分（紫色） -->
+    <path
+        android:fillColor="#9C27B0"
+        android:pathData="M9,10h-1.2c-0.25,0 -0.45,-0.2 -0.45,-0.45v-0.8c0,-0.25 0.2,-0.45 0.45,-0.45H9V10z M15,10h1.2c0.25,0 0.45,-0.2 0.45,-0.45v-0.8c0,-0.25 -0.2,-0.45 -0.45,-0.45H15V10z"/>
+    <!-- U型架向下延伸（紫色线条） -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M7.8,8.8v2.5c0,0.4 0.15,0.8 0.4,1.1 M16.2,8.8v2.5c0,0.4 -0.15,0.8 -0.4,1.1"
+        android:strokeWidth="1"
+        android:strokeColor="#9C27B0"
+        android:strokeLineCap="round"/>
+    <!-- 手柄主体（紫色梯形） -->
+    <path
+        android:fillColor="#7B1FA2"
+        android:pathData="M10.5,12.5h3l0.8,4.5h-4.6z"/>
+    <!-- 手柄高光（浅紫色） -->
+    <path
+        android:fillColor="#AB47BC"
+        android:fillAlpha="0.5"
+        android:pathData="M11,13h2l0.6,3.5h-3.2z"/>
+</vector>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CPhone第三层App通用的空状态提示 -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/empty_state"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <!-- 空状态图标 -->
+    <ImageView
+        android:id="@+id/iv_empty_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:alpha="0.5"
+        android:contentDescription="@string/empty_state"
+        tools:src="@drawable/ic_launcher_foreground" />
+
+    <!-- 空状态标题 -->
+    <TextView
+        android:id="@+id/tv_empty_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:textColor="?attr/colorOnSurface"
+        android:textStyle="bold"
+        tools:text="暂无内容" />
+
+    <!-- 空状态描述 -->
+    <TextView
+        android:id="@+id/tv_empty_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:gravity="center"
+        tools:text="点击右上角刷新按钮生成内容" />
+
+</LinearLayout>

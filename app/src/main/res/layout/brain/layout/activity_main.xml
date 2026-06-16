@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8F5E9"
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/main_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--
+        视频来电/通话界面容器。
+        elevation=50dp:盖在 main_fragment_container(小手机所有内容)之上,
+        但仍在 brain_fragment_container(elevation=100dp,大脑悬浮窗)之下。
+        用途:来电界面收归 MainActivity 统一拉起后,放置于此顶层容器,
+        确保无论用户当前在桌面/QQ/其他任意界面,来电都能覆盖显示。
+        初始 gone,由 MainActivity 在拉起/移除 VideoCallFragment 时切换可见性。
+    -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/video_call_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="50dp"
+        android:visibility="gone" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/brain_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="100dp"
+        android:visibility="gone"
+        tools:layout="@layout/fragment_brain" />
+
+</FrameLayout>

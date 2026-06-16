@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_export"
+        android:title="导出聊天记录" />
+    <item
+        android:id="@+id/menu_regex"
+        android:title="正则" />
+    <item
+        android:id="@+id/menu_rename"
+        android:title="重命名" />
+    <item
+        android:id="@+id/menu_bookmark"
+        android:title="书签" />
+    <item
+        android:id="@+id/menu_avatar"
+        android:title="修改头像" />
+    <item
+        android:id="@+id/menu_auto_read"
+        android:title="自动阅读" />
+    <item
+        android:id="@+id/menu_auto_read_settings"
+        android:title="自动阅读设置" />
+</menu>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:minWidth="210dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/waimai_card_background"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:id="@+id/waimai_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_meituan_logo"
+            android:contentDescription="美团外卖" />
+
+        <TextView
+            android:id="@+id/waimai_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="美团外卖 | 外卖美食"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/waimai_order_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xx 已为你下单，请慢用~"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/waimai_inner_card_background_yellow"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/waimai_order_product_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xxxx"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/waimai_order_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥0.00"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/view_details_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查看订单详情"
+        android:layout_marginTop="16dp"
+        app:backgroundTint="@color/waimai_button_color" />
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 健康模块对外只暴露 Fragment，无需声明 Activity；
+         Health Connect 的 VIEW_PERMISSION_USAGE 用途页处理由 app 模块 MainActivity 承担。 -->
+
+    <application>
+        <!-- 睡眠详情页：显示指定日期的睡眠会话及分期段详情。 -->
+        <activity
+            android:name=".ui.SleepDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.DayNight.NoActionBar" />
+    </application>
+</manifest>

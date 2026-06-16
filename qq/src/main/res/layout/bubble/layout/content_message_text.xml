@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/message_text_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:lineSpacingMultiplier="1.2"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp"
+    android:textColor="?attr/colorOnPrimary"
+    android:textSize="14sp"
+    tools:text="这是一条示例文本消息" />

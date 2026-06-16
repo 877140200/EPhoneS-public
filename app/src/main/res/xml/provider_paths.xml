@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <files-path name="album_images" path="album/" />
+    <cache-path name="shared_files" path="." />
+    <!-- APK 更新包下载目录：DownloadManager 将安装包存到 app 外部私有目录的 Download 下，
+         FileProvider 暴露该路径供系统安装器读取。 -->
+    <external-files-path name="apk_download" path="Download/" />
+    <!-- 酒馆记录目录：clouddreams 导出 .jsonl 时经 FileProvider 分享该路径下的文件。 -->
+    <external-files-path name="chat_records" path="chat_records/" />
+</paths>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CPhone第三层App通用的顶部导航栏 -->
+<com.google.android.material.appbar.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorSurface"
+    android:elevation="4dp">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:titleTextColor="?attr/colorOnSurface">
+
+        <!-- 右侧按钮容器 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <!-- 生成图片按钮 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_generate_images"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="生成图片"
+                android:visibility="gone"
+                app:icon="@drawable/ic_auto_awesome_24"
+                app:iconTint="?attr/colorOnSurface" />
+
+            <!-- 分层摘要按钮 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_memory_summary"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="分层摘要"
+                android:visibility="gone"
+                app:icon="@drawable/ic_memory_summary"
+                app:iconTint="?attr/colorOnSurface" />
+
+            <!-- 新增日记按钮 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_diary"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="新增日记"
+                android:visibility="gone"
+                app:icon="@drawable/ic_add_circle"
+                app:iconTint="?attr/colorOnSurface" />
+
+            <!-- 日记设置按钮 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_diary_settings"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="日记设置"
+                android:visibility="gone"
+                app:icon="@drawable/ic_settings_24"
+                app:iconTint="?attr/colorOnSurface" />
+
+            <!-- 刷新按钮 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_refresh"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/refresh"
+                app:icon="@drawable/ic_refresh"
+                app:iconTint="?attr/colorOnSurface" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+</com.google.android.material.appbar.AppBarLayout>

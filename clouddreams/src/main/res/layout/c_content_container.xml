@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+         android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 顶部标题栏优化 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <!-- 缩小返回按钮尺寸并左对齐 -->
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="4dp"
+                android:contentDescription="@string/返回"
+                android:src="@drawable/ic_arrow_left"
+
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="center"
+
+                android:gravity="center" />
+
+            <!-- 标题文本左对齐并限制显示 -->
+            <TextView
+                android:id="@+id/chatTitleTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/标题"
+                android:ellipsize="end"
+                android:gravity="start|center_vertical"
+                android:maxLines="1"
+                android:text="@string/聊天记录"
+                android:textSize="18sp" />
+
+
+            <!-- 自动阅读设置按钮 - 默认隐藏 -->
+            <ImageView
+                android:id="@+id/autosetting"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/baseline_settings_24"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/menuButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/ic_more_vertical" />
+        </LinearLayout>
+
+        <!-- 聊天记录区域保持不变 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

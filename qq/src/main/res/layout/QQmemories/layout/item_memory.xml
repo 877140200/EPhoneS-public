@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="20dp">
+
+    <!-- 渐变背景层 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_memory_blue_purple">
+
+        <!-- 毛玻璃效果层 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_memory_glass" />
+
+        <!-- 内容层 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/memory_card_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <!-- 装饰性圆点 -->
+            <View
+                android:id="@+id/decorative_dot"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_circle_scrim"
+                android:backgroundTint="#FFFFFF"
+                android:alpha="0.6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_memory_date"
+                app:layout_constraintBottom_toBottomOf="@id/tv_memory_date" />
+
+            <!-- 日期 -->
+            <TextView
+                android:id="@+id/tv_memory_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:alpha="0.85"
+                app:layout_constraintStart_toEndOf="@id/decorative_dot"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="2023-10-27" />
+
+            <!-- 标题 -->
+            <TextView
+                android:id="@+id/tv_memory_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="12dp"
+                android:textAppearance="?attr/textAppearanceHeadline5"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="4dp"
+                app:layout_constraintEnd_toStartOf="@id/btn_memory_detail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_memory_date"
+                tools:text="一个重要的日子" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_memory_detail"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="72dp"
+                android:layout_height="40dp"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:minWidth="72dp"
+                android:minHeight="40dp"
+                android:text="详情"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                app:cornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_memory_title" />
+
+            <!-- 分隔线 -->
+            <View
+                android:id="@+id/divider"
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/white"
+                android:alpha="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_memory_title" />
+
+            <!-- 内容 -->
+            <TextView
+                android:id="@+id/tv_memory_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="@android:color/white"
+                android:alpha="0.9"
+                android:lineSpacingExtra="4dp"
+                android:letterSpacing="0.01"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider"
+                tools:text="这是我们第一次见面，天气很好，阳光明媚..." />
+
+            <!-- 底部装饰 -->
+            <View
+                android:layout_width="60dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/white"
+                android:alpha="0.3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_memory_content" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</com.google.android.material.card.MaterialCardView>

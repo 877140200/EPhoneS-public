@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    酒馆模块主界面。
+    WebView 铺满整屏承载 SillyTavern 前端；当服务无法连接时，覆盖层引导用户先启动 Termux 服务。
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface">
+
+    <!-- WebView 容器：实际 WebView 由 TavernWebViewHolder 动态挂入，以支持跨 Fragment 复用 -->
+    <FrameLayout
+        android:id="@+id/tavern_web_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/tavern_webview_description" />
+
+    <!-- 服务未连接引导层：默认隐藏，加载失败时显示 -->
+    <LinearLayout
+        android:id="@+id/tavern_error_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tavern_error_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tavern_error_title"
+            android:textAppearance="?attr/textAppearanceHeadlineSmall"
+            android:textColor="?attr/colorOnSurface" />
+
+        <TextView
+            android:id="@+id/tavern_error_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/tavern_error_message"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <!-- 打开 Termux 按钮：仅当检测到已安装 Termux 时显示，由代码控制可见性 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tavern_open_termux_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/tavern_open_termux"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tavern_retry_button"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/tavern_error_retry" />
+    </LinearLayout>
+
+    <!--
+        「锦囊」悬浮窗按钮：仅在酒馆内显示的伪悬浮窗入口（不是系统级悬浮窗）。
+        可拖拽贴边，点击展开锦囊浮层。默认隐藏，酒馆网页加载成功后才显示，加载失败时隐藏。
+        盖在 WebView 与引导层之上，确保始终可点。
+    -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/jinnang_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="0dp"
+        android:contentDescription="@string/jinnang_fab_description"
+        android:src="@drawable/ic_jinnang_24"
+        android:visibility="gone"
+        app:elevation="6dp"
+        app:fabSize="normal" />
+
+    <!--
+        锦囊浮层：半透明遮罩 + 居中卡片（不占满全屏，类比 brain 悬浮窗）。
+        点击遮罩空白处关闭锦囊；卡片自身 clickable 拦截点击，避免穿透误关。
+        卡片用受限高度（constrainedHeight）：内容少时贴合内容，内容多时撑到上下边距内再内部滚动。
+        子页面装入卡片内的 jinnang_container（childFragmentManager）。
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/jinnang_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="8dp"
+        android:visibility="gone">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/jinnang_card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="40dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintHeight_max="480dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.5">
+
+            <FrameLayout
+                android:id="@+id/jinnang_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

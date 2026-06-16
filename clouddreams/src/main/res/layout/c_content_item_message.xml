@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- 显示发送时间 -->
+
+    <!-- 显示说了什么 -->
+
+    <!-- 显示是谁说的（无头像图片时显示名字方块） -->
+    <TextView
+        android:id="@+id/senderTextView"
+        android:background="@drawable/usertext"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/avatar_bottom_guide"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.12" />
+
+    <!-- 头像图片：覆盖在名字方块之上，有本地头像时显示，否则隐藏露出名字方块 -->
+    <ImageView
+        android:id="@+id/avatarImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:contentDescription="头像"
+        app:layout_constraintBottom_toBottomOf="@id/senderTextView"
+        app:layout_constraintEnd_toEndOf="@id/senderTextView"
+        app:layout_constraintStart_toStartOf="@id/senderTextView"
+        app:layout_constraintTop_toTopOf="@id/senderTextView" />
+
+    <!-- 消息容器，用于放置消息文本和编辑按钮 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/messageContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/usertext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/senderTextView"
+        app:layout_constraintTop_toTopOf="parent">
+
+<!--        文本框-->
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="4sp"
+            android:paddingLeft="30dp"
+            android:paddingTop="40dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="40dp"
+            android:textColor="#081526"
+            android:textSize="14sp"
+            android:textIsSelectable="true"
+            android:autoLink="web"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 编辑框 -->
+        <EditText
+            android:id="@+id/editMessageText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="textMultiLine"
+            android:visibility="gone"
+            android:paddingLeft="30dp"
+            android:paddingTop="40dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="40dp"
+            android:textColor="#081526"
+            android:textSize="14sp"
+            android:background="#FFFFFF"
+            android:imeOptions="actionDone|flagNoExtractUi"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="LabelFor" />
+
+        <!-- 编辑按钮 - 现在位于消息内部右上角 -->
+        <ImageView
+            android:id="@+id/editIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_edit"
+            android:visibility="visible"
+            android:contentDescription="编辑消息"
+            android:padding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- 完成按钮 - 隐藏状态 -->
+        <ImageView
+            android:id="@+id/doneIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_done"
+            android:visibility="gone"
+            android:contentDescription="完成编辑"
+            android:padding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/touxiang"
+        android:textColor="#081526"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/senderTextView"
+        app:layout_constraintTop_toTopOf="@id/messageContainer" />
+
+    <!-- 移动rightIcon到此处 -->
+    <ImageView
+        android:id="@+id/rightIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="模型图标"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="@id/timeTextView"
+        app:layout_constraintBottom_toBottomOf="@id/timeTextView"
+        app:layout_constraintStart_toEndOf="@id/timeTextView" />
+
+    <!-- 头像底部引导线 -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/avatar_bottom_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="100dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

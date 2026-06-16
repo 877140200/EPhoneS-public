@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 视频通话悬浮窗布局 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- 外圈动画指示通话中 -->
+    <View
+        android:id="@+id/call_ring_indicator"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:focusable="false"
+        android:background="@drawable/bg_floating_window_ring" />
+
+    <!-- 圆形头像卡片 -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="36dp"
+        app:cardElevation="4dp">
+
+        <ImageView
+            android:id="@+id/contact_avatar_floating"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:contentDescription="联系人头像" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- 通话时长显示(可选,较小字体) -->
+    <TextView
+        android:id="@+id/call_duration_floating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="2dp"
+        android:background="#80000000"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:visibility="gone"
+        android:text="00:00" />
+
+</FrameLayout>

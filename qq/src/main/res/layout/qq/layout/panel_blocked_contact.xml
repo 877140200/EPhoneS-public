@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/panel_blocked_contact"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?attr/colorSurfaceContainer">
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/background_activity_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="后台活动总开关"/>
+
+    <TextView
+        android:id="@+id/contact_status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="当前角色状态：被用户拉黑"/>
+
+    <TextView
+        android:id="@+id/cooldown_period_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="需要冷静：3.0小时"/>
+
+    <TextView
+        android:id="@+id/cooldown_timer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="冷静期是否结束：还剩约 xx 分钟"/>
+
+    <TextView
+        android:id="@+id/trigger_condition_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="触发条件：未满足"/>
+
+</LinearLayout>

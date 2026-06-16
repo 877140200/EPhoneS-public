@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/avatar_image_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+        tools:src="@drawable/ic_default_avatar" />
+
+    <TextView
+        android:id="@+id/nickname_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/hand_wave_image_view"
+        app:layout_constraintStart_toEndOf="@id/avatar_image_view"
+        app:layout_constraintTop_toTopOf="@id/avatar_image_view"
+        tools:text="晓蝶町" />
+
+    <TextView
+        android:id="@+id/timestamp_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/hand_wave_image_view"
+        app:layout_constraintStart_toEndOf="@id/avatar_image_view"
+        app:layout_constraintTop_toBottomOf="@id/nickname_text_view"
+        tools:text="今天 19:25" />
+
+    <ImageView
+        android:id="@+id/hand_wave_image_view"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_hand_wave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/avatar_image_view" />
+
+    <LinearLayout
+        android:id="@+id/notification_content_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/nickname_text_view"
+        app:layout_constraintTop_toBottomOf="@id/timestamp_text_view">
+
+        <ImageView
+            android:id="@+id/notification_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="4dp"
+            tools:src="@drawable/ic_like_filled" />
+
+        <TextView
+            android:id="@+id/notification_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?android:attr/textColorPrimary"
+            tools:text="赞了我" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/original_feed_content_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_rounded_gray"
+        android:padding="12dp"
+        android:textColor="?android:attr/textColorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/notification_content_layout"
+        app:layout_constraintTop_toBottomOf="@id/notification_content_layout"
+        tools:text="兰漆琲: 又梦见我的小蛇尾巴被夹断了死掉了，唉。还有就是给刚认识的小女孩买了很多书和蛋糕，和她..." />
+
+    <TextView
+        android:id="@+id/reply_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_rounded_gray"
+        android:padding="12dp"
+        android:textColor="?android:attr/textColorHint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/original_feed_content_text_view"
+        app:layout_constraintTop_toBottomOf="@id/original_feed_content_text_view"
+        tools:text="回复晓蝶町:" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        声明对 Termux 应用包的可见性：
+        Android 11+（targetSdk 30+）受包可见性限制，未声明则 getLaunchIntentForPackage("com.termux")
+        恒返回 null，导致无法探测安装状态、也无法拉起 Termux。本模块用于承载酒馆（SillyTavern 跑在 Termux），
+        故在此声明，合并到宿主 app 后即可正常探测与拉起 Termux。
+    -->
+    <queries>
+        <package android:name="com.termux" />
+    </queries>
+
+</manifest>

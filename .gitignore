@@ -1,0 +1,56 @@
+z*.iml
+.gradle
+/local.properties
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+/ssryuanma
+/docx/script2.js
+/structure_album.txt
+/album/build
+/structure.txt
+/brain/build
+/core/build/
+/clouddreams/build/
+/aidata/build
+/cphone/build
+/desktop/build
+/settings/build
+/shopping/build
+/qq/build
+/.idea
+/alipay/build
+/eventgraph/build
+/schedule/build
+
+# 激活/更新/反馈的服务端工具与密钥材料，仅本地保存，禁止入库
+/server_tools
+
+# 签名密钥材料，禁止入库（防手滑）
+*.jks
+*.keystore
+
+# JVM 崩溃日志，无需入库
+hs_err_pid*.log
+replay_pid*.log
+
+# 签名密钥材料，禁止入库（即使私有仓库也不行，单独加密备份）
+*.jks
+*.keystore
+/.claude/worktrees/fix-theme-module/
+/.claude/worktrees/home-module/
+/.claude/worktrees/sillytavern-entry/
+/tavern/build
+/.kotlin/errors
+/health/build
+
+# Claude Code / Kiro 工具目录，含 node_modules 和配置（含 API key），禁止入库
+/.kilocode
+/.kilo
+/.roo
+
+# 公开仓模板文件，仅供本地准备，禁止入库（会被同步脚本排除）
+/scripts/public_templates

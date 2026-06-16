@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- 外圈圆圈 -->
+    <path
+        android:fillColor="#12B7F5"
+        android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8z"/>
+    
+    <!-- 聊天气泡图标 - 圆角矩形实心气泡 -->
+    <path
+        android:fillColor="#12B7F5"
+        android:pathData="M8.5,8.5 h7 c1,0 1.5,0.5 1.5,1.5 v3.5 c0,1 -0.5,1.5 -1.5,1.5 h-1 l-1.2,1.5 l-1.2,-1.5 h-3.6 c-1,0 -1.5,-0.5 -1.5,-1.5 v-3.5 c0,-1 0.5,-1.5 1.5,-1.5 z"/>
+    
+    <!-- 三个点 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M10,11.5 m-0.6,0 a0.6,0.6 0 1,0 1.2,0 a0.6,0.6 0 1,0 -1.2,0"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,11.5 m-0.6,0 a0.6,0.6 0 1,0 1.2,0 a0.6,0.6 0 1,0 -1.2,0"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M14,11.5 m-0.6,0 a0.6,0.6 0 1,0 1.2,0 a0.6,0.6 0 1,0 -1.2,0"/>
+</vector>

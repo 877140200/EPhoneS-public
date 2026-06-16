@@ -1,0 +1,73 @@
+开源软件许可证声明
+===================
+
+本应用使用了以下开源软件库,我们在此对这些开源项目的贡献者表示感谢。
+
+---
+
+1. 其他依赖库
+------------
+本应用还使用了以下开源库:
+
+- AndroidX库 (Apache License 2.0)
+  提供Android应用开发的基础组件
+
+- Kotlin标准库 (Apache License 2.0)
+  提供Kotlin语言支持
+
+- Material Components (Apache License 2.0)
+  提供Material Design UI组件
+
+- Retrofit (Apache License 2.0)
+  提供网络请求功能
+
+- OkHttp (Apache License 2.0)
+  提供HTTP客户端功能
+
+- Gson (Apache License 2.0)
+  提供JSON解析功能
+
+- Glide (BSD, MIT等多种许可)
+  提供图片加载功能
+
+- Room (Apache License 2.0)
+  提供本地数据库功能
+
+- WorkManager (Apache License 2.0)
+  提供后台任务管理功能
+
+---
+
+Apache License 2.0 许可证要点
+============================
+
+Apache License 2.0是一个宽松的开源许可证,允许:
+
+✓ 商业使用
+✓ 修改源代码
+✓ 分发
+✓ 专利使用
+✓ 私人使用
+
+要求:
+- 保留版权声明和许可证声明
+- 说明对代码所做的重大修改
+- 包含NOTICE文件(如果存在)
+
+免责声明:
+- 软件"按原样"提供,不提供任何明示或暗示的保证
+- 作者或版权持有人不对任何索赔、损害或其他责任负责
+
+完整的Apache License 2.0许可证文本,请查看"Apache 2.0许可证全文"。
+
+---
+
+致谢
+====
+
+感谢所有开源软件的开发者和贡献者,你们的工作让这个应用得以实现。
+开源精神推动了技术的进步和知识的共享。
+
+如果您对本应用使用的开源软件有任何疑问,请通过应用内反馈功能联系我们。
+
+最后更新: 2024年12月

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/album_nav_graph"
+    app:startDestination="@id/albumFragment">
+
+    <fragment
+        android:id="@+id/albumFragment"
+        android:name="com.susking.ephone_s.album.ui.AlbumFragment"
+        android:label="AlbumFragment" />
+    <fragment
+        android:id="@+id/allPhotosFragment"
+        android:name="com.susking.ephone_s.album.ui.AllPhotosFragment"
+        android:label="AllPhotosFragment" />
+    <fragment
+        android:id="@+id/albumListFragment"
+        android:name="com.susking.ephone_s.album.ui.AlbumListFragment"
+        android:label="AlbumListFragment" >
+        <action
+            android:id="@+id/action_albumListFragment_to_photoGridFragment"
+            app:destination="@id/photoGridFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoGridFragment"
+        android:name="com.susking.ephone_s.album.ui.photogrid.PhotoGridFragment"
+        android:label="PhotoGridFragment" />
+</navigation>

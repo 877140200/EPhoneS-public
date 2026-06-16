@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+    <!-- aidata 模块作为数据中台，不包含任何Activity或Service -->
+</manifest>

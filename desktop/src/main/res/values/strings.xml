@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 天气卡片相关文案 -->
+    <!-- 无天气缓存时的占位位置名 -->
+    <string name="weather_card_no_data_location">未知位置</string>
+    <!-- 无天气缓存时引导用户点击刷新 -->
+    <string name="weather_card_tap_to_refresh">点击刷新</string>
+    <!-- 温度展示格式，参数为整数摄氏度，例如 23° -->
+    <string name="weather_card_temperature_format">%1$d°</string>
+</resources>

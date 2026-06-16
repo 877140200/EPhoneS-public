@@ -1,0 +1,20 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- 外圈圆圈 -->
+    <path
+        android:fillColor="#607D8B"
+        android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8z"/>
+    <!-- 图案,不超过外圈,颜色和外圈一致 -->
+
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#607D8B"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M8.8,15.5C7.667,15.5 6.8,14.633 6.8,13.5C6.8,12.561 7.425,11.759 8.257,11.575C8.193,11.391 8.16,11.187 8.16,10.979C8.16,9.232 9.532,7.86 11.279,7.86C12.079,7.86 12.815,8.139 13.398,8.608C13.757,8.419 14.167,8.31 14.606,8.31C15.968,8.31 17.079,9.421 17.079,10.783C17.079,10.948 17.062,11.109 17.032,11.266C17.732,11.582 18.22,12.286 18.22,13.114C18.22,14.275 17.282,15.227 16.121,15.227C15.939,15.227 15.768,15.203 15.604,15.161C15.528,15.457 15.221,15.68 14.859,15.68L8.8,15.5Z"/>
+
+</vector>

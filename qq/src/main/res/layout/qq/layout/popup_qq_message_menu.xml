@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#424242"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <!-- Top Row -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <include
+                android:id="@+id/action_copy"
+                layout="@layout/item_message_menu" />
+            <include
+                android:id="@+id/action_forward"
+                layout="@layout/item_message_menu" />
+            <include
+                android:id="@+id/action_favorite"
+                layout="@layout/item_message_menu" />
+            <include
+                android:id="@+id/action_delete"
+                layout="@layout/item_message_menu" />
+            <include
+                android:id="@+id/action_multi_select"
+                layout="@layout/item_message_menu" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:background="#6AFFFFFF" />
+
+        <!-- Bottom Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <include
+                android:id="@+id/action_quote"
+                layout="@layout/item_message_menu" />
+            <include
+                android:id="@+id/action_remind"
+                layout="@layout/item_message_menu" />
+            <include
+                android:id="@+id/action_regenerate_tts"
+                layout="@layout/item_message_menu"
+                android:visibility="gone" />
+            <include
+                android:id="@+id/action_screenshot"
+                layout="@layout/item_message_menu" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="chat_bubble_corner_radius">16dp</dimen>
+    <dimen name="qq_profile_photo_grid_size">80dp</dimen>
+    <dimen name="qq_profile_photo_grid_margin">4dp</dimen>
+</resources>

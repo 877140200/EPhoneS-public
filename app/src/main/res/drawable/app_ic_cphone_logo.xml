@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- 外圈圆圈 -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8z"/>
+    <!-- 手机图标(优化长宽比例，更高更窄，接近真实手机9:16比例) -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M14,6h-4C9.34,6 8.5,6.84 8.5,7.5v9c0,0.66 0.84,1.5 1.5,1.5h4c0.66,0 1.5,-0.84 1.5,-1.5v-9C15.5,6.84 14.66,6 14,6zM12,17c-0.41,0 -0.75,-0.34 -0.75,-0.75s0.34,-0.75 0.75,-0.75s0.75,0.34 0.75,0.75S12.41,17 12,17zM14,15h-4V7.5h4V15z"/>
+</vector>

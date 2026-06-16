@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#1677FF"
+        android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM12,20c-4.41,0 -8,-3.59 -8,-8s3.59,-8 8,-8 8,3.59 8,8 -3.59,8 -8,8z"/>
+    <!-- 信用卡主体 - 圆角矩形 -->
+    <path
+        android:fillColor="#1677FF"
+        android:pathData="M7,7.5h10c0.83,0 1.5,0.67 1.5,1.5v6c0,0.83 -0.67,1.5 -1.5,1.5H7c-0.83,0 -1.5,-0.67 -1.5,-1.5V9c0,-0.83 0.67,-1.5 1.5,-1.5z"/>
+    <!-- 磁条 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.3"
+        android:pathData="M5.5,10h13v1.2h-13z"/>
+    <!-- 芯片图标 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M7.5,12h2v2h-2z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.5"
+        android:pathData="M7.8,12.3h1.4v1.4H7.8z"/>
+    <!-- 卡号装饰 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M11,13h5v0.6H11z M11,14.2h4v0.6h-4z"/>
+</vector>

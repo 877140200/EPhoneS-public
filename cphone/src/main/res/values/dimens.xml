@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cphone_summary_calendar_cell_radius">12dp</dimen>
+    <dimen name="cphone_summary_calendar_cell_stroke_width">2dp</dimen>
+    <dimen name="cphone_summary_calendar_cell_min_height">44dp</dimen>
+</resources>

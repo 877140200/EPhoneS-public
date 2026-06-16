@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    网络安全配置。
+
+    默认禁止明文（HTTP）流量，保持全局 HTTPS 安全基线。
+    仅对天气定位兜底使用的 ip-api.com 单独放行明文——其免费版接口只提供 HTTP，
+    不放行则 IP 定位必然失败。放行范围被严格限定在该域名，不影响其他任何请求。
+-->
+<network-security-config>
+    <!-- 仅 ip-api.com 允许明文流量，用于 GPS 定位失败时的 IP 兜底 -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">ip-api.com</domain>
+    </domain-config>
+    <!-- 本机回环地址允许明文，用于酒馆模块 WebView 连接 Termux 中的 SillyTavern 本地服务 -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">127.0.0.1</domain>
+        <domain includeSubdomains="false">localhost</domain>
+    </domain-config>
+</network-security-config>

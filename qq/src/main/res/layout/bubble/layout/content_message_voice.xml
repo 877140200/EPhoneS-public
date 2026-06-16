@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/voice_message_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp"
+    android:minWidth="100dp">
+
+    <!-- 第一行：播放/暂停图标 + 音浪 + 时长 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- 播放/暂停图标 -->
+        <ImageView
+            android:id="@+id/voice_play_pause_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/baseline_play_arrow_24"
+            android:contentDescription="播放语音"
+            android:tint="?android:attr/textColorPrimary" />
+
+        <!-- 静止的音浪图案 (未播放时显示) -->
+        <ImageView
+            android:id="@+id/voice_wave_static"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_voice_wave_static"
+            android:contentDescription="音浪图案"
+            android:visibility="visible" />
+
+        <!-- 动画音浪 (播放时显示) -->
+        <ImageView
+            android:id="@+id/voice_wave_animation"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/anim_voice_wave"
+            android:contentDescription="音浪动画"
+            android:visibility="gone" />
+
+        <!-- 时长文本 -->
+        <TextView
+            android:id="@+id/voice_duration_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="4&quot;"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <!-- 第二行：隐藏的内容文本，点击后显示 -->
+    <TextView
+        android:id="@+id/voice_content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="14sp"
+        android:lineSpacingMultiplier="1.2"
+        tools:text="这是语音消息的文字内容" />
+
+</LinearLayout>

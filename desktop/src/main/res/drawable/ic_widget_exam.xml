@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 考试倒计时图标：闹钟，用于课程表卡片次信息行 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="18dp"
+    android:height="18dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M12,6a1,1 0,0 0,-1 1v5a1,1 0,0 0,0.4 0.8l3,2.25a1,1 0,1 0,1.2 -1.6L13,11.5V7a1,1 0,0 0,-1 -1z" />
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M12,2A10,10 0,1 0,22 12,10 10,0 0,0 12,2zM12,20a8,8 0,1 1,8 -8A8 8,0 0,1 12,20z" />
+</vector>
